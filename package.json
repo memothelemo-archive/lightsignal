@@ -1,15 +1,22 @@
 {
   "name": "@rbxts/lightsignal",
   "version": "1.0.0",
-  "description": "",
+  "description": "Lightest signal.",
   "main": "out/init.lua",
   "scripts": {
     "prepublishOnly": "rbxtsc"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "memothelemo",
+  "license": "MIT",
   "types": "out/index.d.ts",
+  "bugs": {
+	  "url": "https://github.com/memothelemo/lightsignal/issues"
+  },
+  "repository": {
+	  "url": "https://github.com/memothelemo/lightsignal",
+	  "type": "git"
+  },
   "files": [
     "out"
   ],
