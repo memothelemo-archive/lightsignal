@@ -16,4 +16,4 @@ Download the `benchmarku.rbxl` file for benchmark purposes. This benchmark test 
 
 ## Warning (Edited: 07/17/2021)
 
-This module does not ensures memory leakage and it doesn't give an error (if something goes wrong with the callback function) because it uses coroutine to spawn functions. I will try my best to how to do that in the next release)
+This module does not ensures memory leakage prevention and it doesn't give an error (if something goes wrong with the callback function) because it uses coroutine to spawn functions. I will try my best to how to do that in the next release
