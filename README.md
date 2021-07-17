@@ -14,6 +14,6 @@ Download the `benchmarku.rbxl` file for benchmark purposes. This benchmark test 
 | Wait times test (0.1)       | 931ms       | 141ms       | 112ms         |
 | Destroying 1000 connections | 33.6μs      | 5.41μs      | 14.0μs        |
 
-## Warning
+## Warning (Edited: 07/17/2021)
 
-This module is not stable as you think. It will leak some memory (I don't know how to find out if this module is memory leaking).
+This module does not ensures memory leakage and it doesn't give an error (if something goes wrong with the callback function) because it uses coroutine to spawn functions. I will try my best to how to do that in the next release)
