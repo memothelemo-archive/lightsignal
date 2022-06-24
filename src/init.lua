@@ -84,25 +84,12 @@ local Signal do
 
 	-- A weird hack
 	function Signal.__index:Wait()
-		local parameters = nil
-
-		do
-			local recieved = false
-			local conn = self:Connect(function(...)
-				parameters = { ... }
-				
-				-- Otherwise it will cause some problems
-				-- because it is asynchornous!
-				recieved = true
-			end)
-
-			while not recieved do
-				RunService.Heartbeat:Wait()
-			end
-			conn:Disconnect()
-		end
-
-		return unpack(parameters)
+		local recieved = false
+		local thread = coroutine.running()
+		local conn = self:Connect(function(...)
+			coroutine.resume(thread, ...)
+		end)
+		return coroutine.yield()
 	end
 
 	function Signal.__index:Destroy()
